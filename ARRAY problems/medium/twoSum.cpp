@@ -15,9 +15,9 @@ vector<int> twoSum(vector<int> &nums, int target)
         int subtract = target - nums[i];
         if (numMap.count(subtract))
         {
-            return {(numMap[subtract]), i};
+            return {(numMap[subtract]), i+1};
         }
-        numMap[nums[i]] = i;
+        numMap[nums[i]] = i+1;
     }
     return {};
 }
@@ -51,7 +51,7 @@ int main()
 
     // vector<int> ans = twoSum(nums , target);
     //only if given arr is sorted
-    vector<int> ans = twoSum2(nums , target);
+    vector<int> ans = twoSum(nums , target);
 
     for(auto num : ans ){
         cout<< num << " ";

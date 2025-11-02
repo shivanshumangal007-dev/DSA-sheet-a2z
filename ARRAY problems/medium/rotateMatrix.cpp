@@ -8,7 +8,6 @@ using namespace std;
 
 void rotate(vector<vector<int>> &matrix)
 {
-    vector<vector<int>> temp;
     int n = matrix.size();
     for (int i = 0; i < n; i++)
     {
